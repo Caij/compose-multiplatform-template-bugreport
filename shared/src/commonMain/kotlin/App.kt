@@ -16,6 +16,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.focus.focusProperties
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.painterResource
 
@@ -67,6 +68,8 @@ fun App() {
                         "4\n\n\n\n\n",
                     modifier = Modifier.fillMaxWidth().clickable {
 
+                    }.focusProperties {
+                        canFocus = false
                     })
             }
         }
